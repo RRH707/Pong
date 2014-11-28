@@ -14,7 +14,7 @@ package
 		private var _upKey:int; 
 		private var _downKey:int;
 		private var _dir:int = 0;
-		private var _speed:int = 5;
+		private var _speed:int = 15;
 		private var _horizontal:Boolean;
 		
 		
@@ -71,6 +71,28 @@ package
 			{
 				this.y += _dir;
 			}
+			
+			while(this.x - width / 2 < 0)
+			{
+				this.x += 1
+			}
+			
+			while (this.y - height / 2 < 0)
+			{
+				this.y += 1
+			}
+			
+			while (this.x + width / 2 > 800)
+			{
+				this.x += -1
+			}
+			
+			while (this.y + height / 2 > 600)
+			{
+				this.y += -1
+			}
+			
+			
 			
 		}
 		
